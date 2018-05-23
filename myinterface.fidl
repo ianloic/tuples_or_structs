@@ -1,0 +1,6 @@
+// MyInterface.fidl
+//
+interface MyInterface {
+  1: Hello() -> (string? error, string? greeting);
+  2: Goodbye() -> (string? error, string? farewell, int32 days_until_we_see_each_other);
+}
