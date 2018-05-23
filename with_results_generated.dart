@@ -4,10 +4,18 @@ import 'dart:async';
 class MyInterface$goodbye {
   final String farewell;
   final int days_until_we_see_each_other;
-  MyInterface$goodbye(this.farewell, this.days_until_we_see_each_other);
+  MyInterface$goodbye(
+      {@required this.farewell, @required this.days_until_we_see_each_other});
 }
 
-abstract class MyInterface_classes {
+abstract class MyInterface {
   Future<String> hello();
   Future<MyInterface$goodbye> goodbye();
 }
+
+// Stolen from package:meta
+class Required {
+  const Required();
+}
+
+const Required required = const Required();

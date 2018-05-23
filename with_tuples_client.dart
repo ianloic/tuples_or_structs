@@ -4,7 +4,7 @@ import 'tuple.dart';
 import 'with_tuples_generated.dart';
 
 // Code that calls with tuples
-Future<Null> call_tuple_interface(MyInterface_tuples service) async {
+Future<Null> call_tuple_interface(MyInterface service) async {
   Tuple2<String, String> hello_result = await service.hello();
   if (hello_result.first != null) {
     print("There was an error: ${hello_result.first}");

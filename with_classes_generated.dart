@@ -4,7 +4,7 @@ import 'dart:async';
 class MyInterface$hello {
   final String error;
   final String greeting;
-  MyInterface$hello(this.error, this.greeting);
+  MyInterface$hello({this.error, this.greeting});
 }
 
 class MyInterface$goodbye {
@@ -12,10 +12,10 @@ class MyInterface$goodbye {
   final String farewell;
   final int days_until_we_see_each_other;
   MyInterface$goodbye(
-      this.error, this.farewell, this.days_until_we_see_each_other);
+      {this.error, this.farewell, this.days_until_we_see_each_other});
 }
 
-abstract class MyInterface_classes {
+abstract class MyInterface {
   Future<MyInterface$hello> hello();
   Future<MyInterface$goodbye> goodbye();
 }
